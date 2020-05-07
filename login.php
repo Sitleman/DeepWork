@@ -82,7 +82,6 @@
 </head>
 <body>
 <style>.hidden{opacity:0;} .container{padding-top:10px;} .btn.btn-secondary{background-color: #23D7E5;padding: 10px; margin-bottom:15px;margin-right:8px;} .btn.btn-secondary.active{background-color: #1556D2 !important;}</style>
-
     <section class="wellcome_area clearfix" id="home">
         <div class="container">
             <div class="row">
@@ -116,7 +115,7 @@
                     <button type="radio" id="bb3" class="btn btn-secondary">Работникам</button>
                     -->
                     
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
                       <label class="btn btn-secondary active">
                         <input id="bb1" type="radio" name="options" id="option1" autocomplete="off" checked> Физ. лицо
                       </label>
@@ -124,8 +123,9 @@
                         <input id="bb2" type="radio" name="options" id="option2" autocomplete="off"> Юр. лицо
                       </label>
                       <label class="btn btn-secondary">
-                        <input id="bb3" type="radio" name="options" id="option3" autocomplete="off"> Работникам
-                      </label>
+                        <input id="bb3" type="radio" name="options" id="option3" autocomplete="off"> Вакансии
+                    </label>
+                      
                     </div>
                     
                 </div>

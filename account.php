@@ -67,7 +67,7 @@
                             <div class="hero__text">
                                 <h5>Онлайн сервис неотложной it помощи!</h5>
                                 <h2>Здравствуйте, <?php echo $_SESSION['logged_user']->login ?></h2>
-                                <a href="login.php" class="primary-btn">Свяжитесь с нами</a>
+                                <a href="#register" class="primary-btn">Свяжитесь с нами</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -87,7 +87,7 @@
                 <div class="col-lg-8">
                     <div class="register__text">
                         <div class="section-title">
-                            <h3>Начните сайчас!</h3>
+                            <h3>Начните сейчас!</h3>
                         </div>
                         
                             <div class="card-deck">
@@ -99,7 +99,8 @@
                                         <p class="card-text">Установим или переустановим Linux, Windows или Mac OS. Стоимость лицензии Windows - 2000р.</p>
                                         <br>
                                         <h5 class="card-title">Цена: 1000руб.</h5>
-                                        <a href="https://money.yandex.ru/to/4100111727579162/1000" class="btn btn-primary">Заказать</a>
+                                         <a href="https://money.yandex.ru/to/4100111727579162/1000" class="btn btn-primary">Заказать</a>
+                                        <!--<iframe src="https://money.yandex.ru/quickpay/button-widget?targets=%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%9E%D0%A1&default-sum=1000&button-text=11&any-card-payment-type=on&button-size=m&button-color=white&successURL=&quickpay=small&account=4100111727579162&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe> -->
                                       </div>
                                     </div>
                                 
@@ -112,7 +113,7 @@
                                     <p class="card-text"></p>
                                     <br>
                                     <h5 class="card-title">Цена: 500руб.</h5>
-                                    <a href="#" class="btn btn-primary">Заказать</a>
+                                    <a href="https://money.yandex.ru/to/4100111727579162/500" class="btn btn-primary">Заказать</a>
                                   </div>
                                 </div>
                                 
@@ -125,7 +126,7 @@
                                     <p class="card-text">Проведем диагностику компьютера и выявим неисправность.</p>
                                     <br>
                                     <h5 class="card-title">Цена: 700руб.</h5>
-                                    <a href="#" class="btn btn-primary">Заказать</a>
+                                    <a href="https://money.yandex.ru/to/4100111727579162/700" class="btn btn-primary">Заказать</a>
                                   </div>
                                 </div>
                                 
@@ -140,7 +141,7 @@
                                     <p class="card-text">Соберем ваш компьютер, а также установим ОС и произведем первоначальные настройки.</p>
                                     <br>
                                     <h5 class="card-title">Цена: 3000руб.</h5>
-                                    <a href="#" class="btn btn-primary">Заказать</a>
+                                    <a href="https://money.yandex.ru/to/4100111727579162/3000" class="btn btn-primary">Заказать</a>
                                   </div>
                                 </div>
                                 
@@ -153,7 +154,7 @@
                                     <p class="card-text">Настроем удаленный сервер под ваши задачи: 1С, перенос сайта, хранилище данных и пр.</p>
                                     <br>
                                     <h5 class="card-title">Цена: от 5000руб.</h5>
-                                    <a href="#" class="btn btn-primary">Заказать</a>
+                                    <a href="https://money.yandex.ru/to/4100111727579162/5000" class="btn btn-primary">Заказать</a>
                                   </div>
                                 </div>
                                 
@@ -166,12 +167,15 @@
                                     <p class="card-text">Установка необходимых драйверов и укорение работы системы.</p>
                                     <br>
                                     <h5 class="card-title">Цена: 1000руб.</h5>
-                                    <a href="#" class="btn btn-primary">Заказать</a>
+                                    <a href="https://money.yandex.ru/to/4100111727579162/1000" class="btn btn-primary">Заказать</a>
                                   </div>
                                 </div>
                                 
                                 
+                                
+                                
                             </div>
+                            
                             
                     </div>
                 </div>
@@ -179,43 +183,42 @@
         </div>
     </section>
 
-        <div class="contact-form spad">
+     <section id="register" class="register-domain spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="register__text">
+                        <div class="section-title">
+                            <h3>Задайте вопрос нашему боту!</h3>
+                        </div>
+<iframe
+allow="microphone;"
+width="350"
+height="430"
+src="https://console.dialogflow.com/api-client/demo/embedded/705789fe-e188-41b4-8b59-33fb682663894231421424134">
+</iframe>
+            </div></div>
+        </div>
+    <section>
+
+    
+    <div class="contact-form spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Связаться с нами</h3>
-                    <form action="#">
+                    <form action="send1.php" method="post">
                         <div class="input-list">
-                            <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="Email">
+                            <input type="text" name="fio" placeholder="Имя" required>
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
-                        <textarea placeholder="Опишите подробно вашу проблему"></textarea>
+                        <textarea name="text" placeholder="Опишите подробно вашу проблему" required></textarea>
                         <button type="submit" class="site-btn">Начать</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <section class="choose-plan-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <img src="img/choose-plan.png" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="plan__text">
-                        <h3>Проблемы, которые решает наш сервис!</h3>
-                        <ul>
-                            <li><span class="fa fa-remove"></span> Существует проблема недостатка технического персонала в различных ОУ, предприятиях, а так-же проблема недостатка специалистов, которые могут быстро прийти на помощь</li>
-                            <li><span class="fa fa-remove"></span> Невозможность получить оперативную помощь в сфере IT, а также недостаток технических специалистов на едином государственном экзамене.</li>
-                        </ul>
-                        <a href="#" class="primary-btn">Начните</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -1,3 +1,8 @@
+<?php
+    require "login/db.php";
+    
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -154,7 +159,7 @@
                 <div class="col-lg-4 col-md-3 col-sm-6">
                     <div class="achievement__item">
                         <span class="fa fa-user-o"></span>
-                        <h2 class="achieve-counter">23</h2>
+                        <h2 class="achieve-counter"><?php echo R::count('users'); ?></h2>
                         <p>Физ. лиц</p>
                     </div>
                 </div>
@@ -269,17 +274,18 @@
         </div>
     </section>
 
+
     <div class="contact-form spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Связаться с нами</h3>
-                    <form action="#">
+                    <form action="send.php" method="post">
                         <div class="input-list">
-                            <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="Email">
+                            <input type="text" name="fio" placeholder="Имя" required>
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
-                        <textarea placeholder="Опишите подробно вашу проблему"></textarea>
+                        <textarea name="text" placeholder="Опишите подробно вашу проблему" required></textarea>
                         <button type="submit" class="site-btn">Начать</button>
                     </form>
                 </div>
